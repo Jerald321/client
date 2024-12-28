@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api', // Base URL for all requests
+  baseURL: 'https://server-vtv7.onrender.com/api', // Base URL for all requests
 });
 
 export default axiosInstance;

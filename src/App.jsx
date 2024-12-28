@@ -5,11 +5,11 @@ import RestaurantProfile from './components/RestaurantProfile'
 import Search from './components/Search'
 import UserReview from './components/UserReview'
 
-import Demo from './components/Demo'
+
 import Logout from "./components/Logout"
 import PasswordReset from './components/PasswordReset'
 import Register from './components/Register'
-
+import Userdetails from "./components/Userdetails"
 import Nav from './Nav'
 import Allresturant from "./components/Allresturant"
 import Login from './components/Login'
@@ -24,11 +24,12 @@ function App() {
    
       
       <Nav />
-      <Search />
+      {/* <Search /> */}
      
-      {/* <Allresturant /> */}
+     
      
     <Routes>
+    
     <Route path='/Allresturant' element={ <Allresturant />}> </Route>
       <Route path='/Logout' element={<Logout />}> </Route>
       <Route path='/' element={ <Search />}> </Route>
@@ -40,11 +41,11 @@ function App() {
 
       <Route path='/Login' element={<Login />}> </Route>
       <Route path='/register' element={<Register />}> </Route>
-      {/* <Route path='/userdetails' element={<Userdetails />}> </Route> */}
+      <Route path='/userdetails' element={<Userdetails />}> </Route>
       <Route path='/PasswordReset' element={<PasswordReset />}> </Route>
     </Routes>
 
-
+    <Allresturant />
     
     </BrowserRouter> 
 

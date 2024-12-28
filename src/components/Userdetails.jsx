@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axiosInstance from './axios';
+
 
 const Userdetails = () => {
   const [name, setName] = useState('');
@@ -8,8 +9,8 @@ const Userdetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-    .get('https://token-8t63.onrender.com/api/v1/me', {
+    axiosInstance
+    .get('/me', {
       withCredentials: true,
       headers: {
         'Content-Type': 'application/json',
@@ -32,8 +33,8 @@ const Userdetails = () => {
   
 
   const handleSignOut = () => {
-    axios
-      .post('https://token-8t63.onrender.com/api/v1/logout',{} ,{ withCredentials: true })
+    axiosInstance
+      .post('/logout',{} ,{ withCredentials: true })
       .then((response) => {
         alert(response.data.message); // Logout Successful message
         navigate('/Login'); // Redirect to SignIn
