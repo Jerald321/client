@@ -6,10 +6,11 @@ import Search from './components/Search'
 import UserReview from './components/UserReview'
 
 
-import Logout from "./components/Logout"
+
 import PasswordReset from './components/PasswordReset'
 import Register from './components/Register'
-import Userdetails from "./components/Userdetails"
+
+import Userdetails from './components/UserDetails'
 import Nav from './Nav'
 import Allresturant from "./components/Allresturant"
 import Login from './components/Login'
@@ -31,7 +32,7 @@ function App() {
     <Routes>
     
     <Route path='/Allresturant' element={ <Allresturant />}> </Route>
-      <Route path='/Logout' element={<Logout />}> </Route>
+      {/* <Route path='/Logout' element={<Logout />}> </Route> */}
       <Route path='/' element={ <Search />}> </Route>
 
       <Route path='/UserReview' element={ <UserReview />}> </Route>
